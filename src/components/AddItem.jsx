@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RenderItems from "./RenderItems";
 
 function AddItem() {
   const [inputText, setInputText] = useState("");
@@ -29,13 +30,7 @@ function AddItem() {
         </button>
       </div>
 
-      <div>
-        <ul>
-          {items.map((toDoItem) => {
-            return <li>{toDoItem}</li>;
-          })}
-        </ul>
-      </div>
+      <RenderItems listItems={items} />
     </div>
   );
 }
